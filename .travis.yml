@@ -12,15 +12,21 @@ env:
 install:
 - brew tap wix/brew
 - brew install applesimutils
+- brew install yarn
 - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 - nvm install $NODE_VERSION
 - nvm use $NODE_VERSION
 - nvm alias default $NODE_VERSION
-- npm install
-- npm install -g react-native-cli
-- npm install -g detox-cli
+- yarn
+- yarn global add react-native-cli
+- yarn global add detox-cli
+# - npm install -g react-native-cli
+# - npm install -g detox-cli
 
 script:
-- detox build --configuration ios.sim.release
-- detox test --configuration ios.sim.release --cleanup
+
+# - detox build --configuration ios.sim.release
+# - detox test --configuration ios.sim.release --cleanup
+- npm run ci:build:e2e
+- npm run ci:test:e2e
