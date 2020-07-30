@@ -26,7 +26,7 @@ install:
 
 script:
 
-# - detox build --configuration ios.sim.release
-# - detox test --configuration ios.sim.release --cleanup
-- npm run ci:build:e2e
-- npm run ci:test:e2e
+- travis_wait 20 detox build --configuration ios.sim.release
+- detox test --configuration ios.sim.release --cleanup
+# - yarn ci:build:e2e
+# - yarn ci:test:e2e
