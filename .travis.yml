@@ -28,5 +28,5 @@ script:
 
 # -  detox build --configuration ios.sim.release
 # - detox test --configuration ios.sim.release --cleanup
-- travis_wait 20 yarn ci:build:e2e
+- travis_wait 60 yarn ci:build:e2e
 - yarn ci:test:e2e
