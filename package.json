@@ -119,13 +119,13 @@
         "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/testIgniteProject.app",
         "build": "xcodebuild -workspace ios/testIgniteProject.xcworkspace -scheme testIgniteProject -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
-        "name": "iPhone 8"
+        "name": "iPhone 11"
       },
       "ios.sim.release": {
         "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/testIgniteProject.app",
         "build": "xcodebuild -workspace ios/testIgniteProject.xcworkspace -scheme testIgniteProject -configuration Release -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
         "type": "ios.simulator",
-        "name": "iPhone 8"
+        "name": "iPhone 11"
       }
     }
   },
