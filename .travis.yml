@@ -11,7 +11,7 @@ env:
   - NODE_VERSION=stable
 
 install:
-  - ./travisci/ios-install.sh
+  - bash ./travisci/ios-install.sh
 
 script:
-  - ./travisci/ios-script.sh
+  - bash ./travisci/ios-script.sh
