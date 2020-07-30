@@ -161,7 +161,6 @@
 				1BA90687CB929C443D767669 /* Pods-testIgniteProjectTests.debug.xcconfig */,
 				1B916C24EDC82C0B35298814 /* Pods-testIgniteProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -200,12 +199,11 @@
 			sourceTree = "<group>";
 		};
 		A141D217A64A4D3FA9A12621 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -317,6 +315,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -380,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "NODE_PATH = which node\nexport NODE_BINARY= $(NODE_PATH)\n../node_modules/react-native/scripts/react-native-xcode.sh\n\n\n";
 		};
 		160F409A1AC780CE5C1BA313 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
